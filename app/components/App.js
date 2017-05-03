@@ -38,6 +38,21 @@ class NavBar extends React.Component {
 
 
 
+//props
+class PropsDisplayer extends React.Component {
+  render(){
+    return (
+      <div>
+        <h1>CHECK OUT MY PROPS OBJECT</h1>
+        <h2> Name: {this.props.name}</h2>
+        <h2>Age: {this.props.age} </h2>
+        <h2>State: {this.props.state} </h2>
+      </div>
+      )
+  }
+}
+
+
 
 // nameless module export class es6
 module.exports = class extends React.Component{
@@ -47,6 +62,8 @@ module.exports = class extends React.Component{
       <div className="helloContainer">
       	<Header />
       	<NavBar />
+      {/*props are the attributes below*/}
+        <PropsDisplayer name="george" age="29" state="CA" />
           <h1 className="hello">Hello React</h1>
           <h2>TWO plus TWO equals {2+2}</h2>
       </div>
