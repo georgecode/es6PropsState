@@ -77,8 +77,6 @@ class PropsEvent extends React.Component{
 
 
 
-
-
 //-------------------------------
 //useing this.props.children will get you every thing between the components
 //opening and closing tag
@@ -92,6 +90,7 @@ class BigButton extends React.Component{
       )
   }
 }
+
 
 //-------------------------------
 //How to set default props
