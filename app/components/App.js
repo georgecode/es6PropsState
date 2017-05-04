@@ -75,6 +75,21 @@ class PropsEvent extends React.Component{
 }
 
 
+//useing this.props.children will get you every thing between the components
+//opening and closing tag
+class BigButton extends React.Component{
+  render(){
+    return(
+      <div>
+        <button>Yo I am big</button>
+        {this.props.children}
+      </div>
+      )
+  }
+}
+
+
+
 
 // nameless module export class es6
 module.exports = class extends React.Component{
@@ -85,7 +100,16 @@ module.exports = class extends React.Component{
       	<Header />
       	<NavBar />
         <PropsEvent />
-      {/*props are the attributes below*/}
+
+
+        {/*component with opening and closing tag*/}
+        <BigButton>
+          I am a child of BigButton.
+          <p>some more stuff</p>
+          <h3>foo bar</h3>
+        </BigButton>
+
+        {/*props are the attributes below*/}
         <PropsDisplayer name="george" age={29} faveFood={["pizza","burrito","ice cream" ]} />
           <h1 className="hello">Hello React</h1>
           <h2>TWO plus TWO equals {2+2}</h2>
