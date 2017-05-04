@@ -1,5 +1,7 @@
 var React = require('react');
 
+
+//-------------------------------
 //es6 class
 class Header extends React.Component {
   render(){
@@ -9,6 +11,9 @@ class Header extends React.Component {
   }
 }
 
+
+//-------------------------------
+//Old school ns ES6 function
 class NavBar extends React.Component {
   render() {
     var pages = ['home', 'blog', 'pics', 'about', 'contact'];
@@ -37,7 +42,7 @@ class NavBar extends React.Component {
 }
 
 
-
+//-------------------------------
 //props
 class PropsDisplayer extends React.Component {
   render(){
@@ -53,11 +58,7 @@ class PropsDisplayer extends React.Component {
 }
 
 
-
-
-
-
-
+//-------------------------------
 //Pass a function in as props to an event handler
 class PropsEvent extends React.Component{
   
@@ -75,6 +76,10 @@ class PropsEvent extends React.Component{
 }
 
 
+
+
+
+//-------------------------------
 //useing this.props.children will get you every thing between the components
 //opening and closing tag
 class BigButton extends React.Component{
@@ -88,9 +93,24 @@ class BigButton extends React.Component{
   }
 }
 
+//-------------------------------
+//How to set default props
+class Button extends React.Component{
+  static get defaultProps() {
+    return {text: 'getDefaultProps button'}
+  }
+
+  render(){
+    return(
+      <button>
+        {this.props.text}
+      </button>
+      )
+  }
+}
 
 
-
+//-------------------------------
 // nameless module export class es6
 module.exports = class extends React.Component{
   render() {
@@ -109,10 +129,11 @@ module.exports = class extends React.Component{
           <h3>foo bar</h3>
         </BigButton>
 
+        {/*button with Default props set*/}
+        <Button />
+
         {/*props are the attributes below*/}
         <PropsDisplayer name="george" age={29} faveFood={["pizza","burrito","ice cream" ]} />
-          <h1 className="hello">Hello React</h1>
-          <h2>TWO plus TWO equals {2+2}</h2>
       </div>
     )
   }
