@@ -54,6 +54,28 @@ class PropsDisplayer extends React.Component {
 
 
 
+
+
+
+
+//Pass a function in as props to an event handler
+class PropsEvent extends React.Component{
+  
+  handleEvent(){
+    alert('HEEEY yo');
+  }
+
+  render(){
+    return(
+      <div>
+        <a href="#"><h1 onClick={this.handleEvent}>Click Me</h1></a>
+      </div>
+      )
+  }
+}
+
+
+
 // nameless module export class es6
 module.exports = class extends React.Component{
   render() {
@@ -62,6 +84,7 @@ module.exports = class extends React.Component{
       <div className="helloContainer">
       	<Header />
       	<NavBar />
+        <PropsEvent />
       {/*props are the attributes below*/}
         <PropsDisplayer name="george" age={29} faveFood={["pizza","burrito","ice cream" ]} />
           <h1 className="hello">Hello React</h1>
