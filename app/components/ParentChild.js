@@ -1,5 +1,7 @@
 var React = require('react');
 
+
+//setting a statless child class props with a parent class
 class Parent extends React.Component{
 
 	constructor(props,context){
@@ -10,7 +12,7 @@ class Parent extends React.Component{
 		};
 
 		this.handleClick = this.handleClick.bind(this);
-	}//END ES6 way
+	}
 
 	handleClick(){
 		var total = this.state.totalClicks;
@@ -23,13 +25,11 @@ class Parent extends React.Component{
 		<div>
 			<h1>{this.state.totalClicks}</h1>
 			<Child onClick={this.handleClick}/>
-			<h1>zzzWazzz up</h1>
+			<h1>Wazzz up</h1>
 		</div>
 		)
 	}
 }
-
-
 
 
 class Child extends React.Component{
