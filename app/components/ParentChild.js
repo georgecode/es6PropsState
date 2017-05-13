@@ -1,4 +1,5 @@
 var React = require('react');
+// import React from 'react'
 
 
 //setting a statless child class props with a parent class
